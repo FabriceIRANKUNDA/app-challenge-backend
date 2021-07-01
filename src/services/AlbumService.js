@@ -12,9 +12,12 @@ class AlbumService {
 
   static async getAlbum(req, res) {
     const { albumId } = req.params;
+    const url = `${process.env.URL$}${albumId}/photos`;
+    console.log(url);
+
     const config = {
       method: "get",
-      url: `${process.env.URL$}${albumId}/photos`,
+      url: url,
       headers: {},
     };
 
