@@ -12,8 +12,7 @@ class AlbumService {
 
   static async getAlbum(req, res) {
     const { albumId } = req.params;
-    const url = `${process.env.URL$}${albumId}/photos`;
-    console.log(url);
+    const url = `https://jsonplaceholder.typicode.com/albums/${albumId}/photos`;
 
     const config = {
       method: "get",
