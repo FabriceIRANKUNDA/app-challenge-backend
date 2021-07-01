@@ -3,7 +3,7 @@ import cors from "cors";
 import router from "./routes/albumRoutes";
 import globalErrorHandler from "./controller/errorController";
 const app = express();
-app.use(cors);
+app.use(cors());
 
 app.use(express.json({ limit: "50mb", type: "application/json" }));
 app.get("/", (req, res) => {
